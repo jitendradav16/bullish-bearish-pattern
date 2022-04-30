@@ -1,0 +1,38 @@
+{
+  "name": "bullish-bearish-pattern",
+  "version": "1.0.0",
+  "description": "This is free source library which provides bullish and bearish patterns are detected base on input.",
+  "main": "src/index.ts",
+  "repository": "https://github.com/jitendradavariya/bullish-bearish-pattern.git",
+  "author": "jitendradavariya <jitendra.dav16@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "bullish",
+    "bearish",
+    "patterns"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^28.0.3",
+    "jest": "^28.0.3",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.4"
+  }
+}
